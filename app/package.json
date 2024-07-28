@@ -1,0 +1,13 @@
+{
+	"name": "app-router-app",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"clean-build": "rm -rf .next/cache/fetch-cache && npm run build",
+		"clean-start": "npm run clean-build && npm run start"
+	}
+}
