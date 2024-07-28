@@ -12,5 +12,8 @@
 		"react": "^18",
 		"react-dom": "^18"
 	},
-	"workspaces": ["app/*", "api/*"]
+	"scripts": {
+		"dev": "nx run-many --target=dev --projects=app,api"
+	},
+	"workspaces": ["app", "api"]
 }

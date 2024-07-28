@@ -1,5 +1,43 @@
 {
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultBase": "main",
-  "nxCloudAccessToken": "MTZlNzc2NDUtYmYyMy00YjNjLTg5ZjctODg5MmFlNmRjYjE2fHJlYWQtd3JpdGU="
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
+	"defaultBase": "main",
+	"nxCloudAccessToken": "MTZlNzc2NDUtYmYyMy00YjNjLTg5ZjctODg5MmFlNmRjYjE2fHJlYWQtd3JpdGU=",
+	"projects": {
+		"app": {
+			"root": "app",
+			"sourceRoot": "app/src",
+			"projectType": "application",
+			"targets": {
+				"dev": {
+					"executor": "nx:run-commands",
+					"options": {
+						"commands": [
+							{
+								"command": "npm run dev --prefix app"
+							}
+						],
+						"parallel": true
+					}
+				}
+			}
+		},
+		"api": {
+			"root": "api",
+			"sourceRoot": "api/src",
+			"projectType": "application",
+			"targets": {
+				"dev": {
+					"executor": "nx:run-commands",
+					"options": {
+						"commands": [
+							{
+								"command": "npm run dev --prefix api"
+							}
+						],
+						"parallel": true
+					}
+				}
+			}
+		}
+	}
 }
