@@ -7,7 +7,6 @@
 		"build": "next build",
 		"start": "next start -p 3000",
 		"lint": "next lint",
-		"clean-build": "rm -rf .next/cache/fetch-cache && npm run build",
-		"clean-start": "npm run clean-build && npm run start"
+		"clean-start": "rm -rf .next && npm run dev"
 	}
 }
