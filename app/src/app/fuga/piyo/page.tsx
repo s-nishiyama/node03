@@ -10,9 +10,9 @@ type UserType = {
 const getUsers = async () => {
 	await new Promise((resolve) => setTimeout(resolve, 3000));
 	// const res = await fetch("https://jsonplaceholder.typicode.com/users");
-	const res = await fetch("http://localhost:3001/api/users").then((res) =>
-		res.json(),
-	);
+	const res = await fetch("http://localhost:3001/api/users", {
+		cache: "no-store",
+	}).then((res) => res.json());
 	const users: UserType[] = res.users;
 	return users.map((user) => {
 		return {
